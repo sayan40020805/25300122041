@@ -1,0 +1,12 @@
+.redirect-wrapper {
+  margin-top: 60px;
+  max-width: 600px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.redirect-wrapper h2 {
+  font-size: 1.5rem;
+  color: #555;
+}

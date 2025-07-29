@@ -1,0 +1,17 @@
+.shortener-container {
+  margin-top: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shortener-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.url-list {
+  margin-top: 30px;
+}
