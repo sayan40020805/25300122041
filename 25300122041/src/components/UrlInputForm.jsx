@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Box, Button, TextField, Typography, Grid, Paper } from "@mui/material";
 import { generateShortCode } from "../utils/shortCodeGenerator";
-import { useLogger } from "../context/LoggerContext";
+import useLogger from "../hooks/useLogger";
 
 const URLInputForm = ({ onSubmit }) => {
   const [inputs, setInputs] = useState([

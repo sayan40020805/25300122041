@@ -1,5 +1,5 @@
 import AppRouter from "./routes/AppRouter";
-import { LoggerProvider } from "./context/LoggerContext";
+import LoggerProvider from "./context/LoggerProvider"; // ✅ CORRECT
 import { CssBaseline } from "@mui/material";
 
 function App() {

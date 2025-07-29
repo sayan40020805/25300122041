@@ -2,13 +2,11 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Container, Typography, Paper, Box, Alert } from "@mui/material";
 import useLogger from "../hooks/useLogger";
-
 const StatsPage = () => {
   const { shortcode } = useParams();
   const [stats, setStats] = useState(null);
   const [error, setError] = useState("");
   const { log } = useLogger();
-
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem(shortcode));
     if (!data) {
@@ -16,21 +14,17 @@ const StatsPage = () => {
       log("Stats_Fetch_Failed", { shortcode, reason: "Not found" });
       return;
     }
-
     const now = new Date().getTime();
     const remainingTime = Math.max(
       0,
       Math.floor((data.expiryTime - now) / 60000)
     );
-
     setStats({
       ...data,
       remainingTime,
     });
-
     log("Stats_Fetched", { shortcode });
   }, [shortcode, log]);
-
   if (error) {
     return (
       <Container maxWidth="sm" sx={{ mt: 5 }}>
@@ -38,7 +32,6 @@ const StatsPage = () => {
       </Container>
     );
   }
-
   return (
     <Container maxWidth="sm" sx={{ mt: 5 }}>
       <Paper elevation={3} sx={{ p: 3 }}>
@@ -63,5 +56,4 @@ const StatsPage = () => {
     </Container>
   );
 };
-
 export default StatsPage;

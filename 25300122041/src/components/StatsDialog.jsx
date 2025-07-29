@@ -6,10 +6,8 @@ import {
   DialogActions,
   Button,
 } from "@mui/material";
-
 const StatsDialog = ({ open, onClose, stats }) => {
   if (!stats) return null;
-
   return (
     <Dialog open={open} onClose={onClose}>
       <DialogTitle>URL Statistics</DialogTitle>
@@ -36,5 +34,4 @@ const StatsDialog = ({ open, onClose, stats }) => {
     </Dialog>
   );
 };
-
 export default StatsDialog;

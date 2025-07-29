@@ -9,7 +9,7 @@ const useLogger = () => {
   }
 
   return {
-    log: context.logEvent,
+    logEvent: context.logEvent, // ✅ match your components
   };
 };
 
